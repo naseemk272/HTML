@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+		body
+		{
+			background-color:#FFEBCD;
+		}
+		.autostyle2
+		{
+			color:red;
+			font-size:20px;
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+	<form action="registeration.html">
+		<table>
+		
+			<tr class="autostyle2">
+				<td colspan="4">OrderFoodOnline</td>
+			</tr>
+			
+			<tr>
+				<td width="100%" colspan="4"></td>
+			</tr>
+			
+			<tr>
+				<td><label for="name">Name:</label></td>
+				<td>
+					<input type="text" id="name" name="usrname" placeholder="Enter your name" required></input>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label for="date">Date:</label></td>
+				<td>
+					<input type="date" id="date" name="date" required></input>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label for="email">Email:</label></td>
+				<td>
+					<input type="email" id="email" name="usrmail" placeholder="Enter your email ID" required></input>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label for="number">Contact Number:</label></td>
+				<td>
+					<input type="tel" id="number" name="usrtel" placeholder="Enter your phone number" required></input>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label for="food">Select Food:</label></td>
+				<td>
+					<label for="nonveg">Non-vegetarian</label>
+					<input type="radio" id="nonveg" name="food"></input>
+					
+					<label for="veg">Vegetarian</label>
+					<input type="radio" id="veg" name="food"></input>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label>Select your Restuarant:</label></td>
+				<td>
+					<select>
+						<option value="opt1">Select your Restaurant</option>
+						<option value="opt2">Lucky Hotel</option>
+						<option value="opt3">Holiday Inn</option>
+						<option value="opt4">King road</option>
+						<option value="opt5">La Figa</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label>Drinks:</label></td>
+				<td>
+					<select>
+						<option value="opt6">Select your Drink</option>
+						<option value="opt7">Cappuccino</option>
+						<option value="opt8">Pepsi</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label>Soups:</label></td>
+				<td>
+					<select>
+						<option value="opt9">Select the soup of your choice</option>
+						<option value="opt10">Minestrone</option>
+						<option value="opt11">Fonduta</option>
+						<option value="opt12">Chicken Soup</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label>Dishes:</label></td>
+				<td>
+					<select>
+						<option value="opt13">Select your Dish</option>
+						<optgroup label="Italian">
+							<option value="opt14">Pasta</option>
+							<option value="opt15">Fish</option>
+							<option value="opt16">Rice</option>
+						</optgroup>
+						<optgroup label="Chinese">
+							<option value="opt17">Chowmein</option>
+							<option value="opt18">Noodels</option>
+							<option value="opt19">Fried Rice</option>
+						</optgroup>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label>Order For:</label></td>
+				<td>
+					<label for="pickup">Take Away</label>
+					<input type="radio" name="pickup" id="pickup"></input>
+					
+					<label for="home">Home Delivery</label>
+					<input type="radio" name="pickup" id="home"></input>
+				</td>
+			</tr>
+			
+		</table>
+	</form>
+</body>
+</html>

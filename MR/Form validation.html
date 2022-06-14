@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		form
+		{
+			background-color:#FFEBCD;
+		}
+		.autostyle2
+		{
+			color:red;
+			font-size:20px;
+			text-align:center;
+		}
+	</style>
+	<script>
+		function show()
+		{
+		var fname = document.getElementById("name").value;
+		var date = document.getElementById("date").value;
+		var email = document.getElementById("email").value;
+		var contact = document.getElementById("tel").value;
+		var gender = document.getElementById("r1").value;
+		var gender1 = document.getElementById("r2").value;
+		var res = document.getElementById("res").value;
+		var drink = document.getElementById("drink").value;
+		var soup = document.getElementById("soup").value;
+		var dish = document.getElementById("dish").value;
+		var food = document.getElementById("r3").value;
+		var food1 = document.getElementById("r4").value;
+		var address = document.getElementById("orderfor").value;
+		var city = document.getElementById("state").value;
+		confirm("You have entered:" + "\nName : " + fname + "\nDate : " + date + "\nEmail-ID : " + email + "\nContact : " + contact + "\nGender : " + gender + "\nRestuarant : " + res + "\nDrinks : " + drink + "\nSoup : " + soup + "\nDish : " + dish + "\nFood : " + food + "\nAddress : " + address + "\nCity : " + city + "\n\n Do you want to confirm these details ?");
+		}
+		function changeColor(val)
+		{
+			if((val.value)=="" || (val.value)==null)
+			{
+				val.style.background="red";
+			}
+			else
+			{
+				val.style.background="#FFFFFF";
+			}
+		}	
+	</script>
+</head>
+<body>
+<DIV style="width:28%; margin-left:400px; margin-top:100px; border:2px solid black">
+	<form>
+		<table>
+		
+			<tr class="autostyle2">
+				<td colspan="4">OrderFoodOnline</td>
+			</tr>
+			
+			<tr>
+				<td width="100%" colspan="4"></td>
+			</tr>
+			
+			<tr>
+				<td><label for="name">Name:</label></td>
+				<td>
+					<input type="text" id="name" name="usrname" placeholder="Enter your name" onblur="changeColor(this)" required></input>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Date:</td>
+				<td>
+					<input type="date" name="date" id="date" onblur="changeColor(this)" required></input>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label for="email">Email ID:</label></td>
+				<td>
+					<input type="email" id="email" name="usrmail" placeholder="Enter your email ID" onblur="changeColor(this)" required></input>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label for="tel">Contact Number:</label></td>
+				<td>
+					<input type="tel" id="tel" name="usrtel" placeholder="Enter your phone number" onblur="changeColor(this)" required></input>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Select Food Type:</td>
+				<td>
+				<label for="r1">Non-vegetarian</label>	<input type="radio" id="r1" value="Non-vegetarian" name="rd1" onblur="changeColor(this)" required></input>
+				<label for="r2">Vegetarian</label>	<input type="radio" id="r2" value="Vegetarian" name="rd1" onblur="changeColor(this)" required></input>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Select Restaurant:</td>
+				<td>
+					<select name="res" id="res" required>
+						<option>Select your Restaurant</option>
+						<option value="Lucky Hotel">Lucky Hotel</option>
+						<option value="Holiday Inn">Holiday Inn</option>
+						<option value="King road">King road</option>
+						<option value="La Figa">La Figa</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Drinks:</td>
+				<td>
+					<select name="drink" id="drink" required>
+						<option>Select your Drink</option>
+						<option value="Cappuccino">Cappuccino</option>
+						<option value="Pepsi">Pepsi</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Soups:</td>
+				<td>
+					<select name="soup" id="soup" required>
+						<option>Select the soup of your choice</option>
+						<option value="Minestrone">Minestrone</option>
+						<option value="Fonduta">Fonduta</option>
+						<option value="Chicken Soup">Chicken Soup</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Dishes:</td>
+				<td>
+					<select name="dish" id="dish" required>
+						<option value="opt13">Select your Dish</option>
+						<optgroup label="Italian">
+							<option value="Pasta">Pasta</option>
+							<option value="Fish">Fish</option>
+							<option value="Rice">Rice</option>
+						</optgroup>
+						<optgroup label="Chinese">
+							<option value="Chowmein">Chowmein</option>
+							<option value="Noodels">Noodels</option>
+							<option value="Fried Rice">Fried Rice</option>
+						</optgroup>
+					</select>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Select Food:</td>
+				<td>
+				<label for="r3">Take Away</label>	<input type="radio" id="r3" value="Take Away" name="rd2" onblur="changeColor(this)" required></input>
+				<label for="r4">Home Delivery</label>	<input type="radio" id="r4" value="Home Delivery" name="rd2" onblur="changeColor(this)" required></input>
+				</td>
+			</tr>
+
+			<tr>
+				<td><label for="orderfor">Address:</label></td>
+				<td>
+					<textarea rows="6" cols="24" id="orderfor" placeholder="Enter Your Address Here" onblur="changeColor(this)" required></textarea>
+				</td>
+			</tr>
+
+			<tr>
+				<td><label for="state">City:</label></td>
+				<td>
+					<input list="stat" name="stat" id="state" onblur="changeColor(this)" required></input>
+					<datalist id="stat">
+						<option value="Mumbai"></option>
+						<option value="Thane"></option>
+						<option value="Virar"></option>
+						<option value="Pune"></option>
+						<option value="Andherie"></option>
+					</datalist>
+				</td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td>
+					<input type="Submit" onClick="show();"></input>
+					<input type="reset"></input>
+				</td>
+			</tr>
+			
+		</table>
+	</form>
+</DIV>
+</body>
+</html>
